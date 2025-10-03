@@ -117,13 +117,35 @@ wrangler login
 wrangler pages project create lukehoward-com --production-branch main
 ```
 
-4. **Deploy to Cloudflare Pages**:
+This will:
+
+- Create the Pages project `lukehoward-com` in your Cloudflare account
+- Set the production branch to `main`
+
+⚠️ **Important**: This does not wire up the GitHub repo integration. That still requires the one-time "connect repo" step in the Cloudflare Dashboard (because it installs the GitHub App under your account/org).
+
+4. **Connect GitHub Repository** (one-time setup):
+
+   Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) → Pages → `lukehoward-com` → **"Connect to Git"**
+
+   - Select **GitHub** as your git provider
+   - Authorize Cloudflare to access your GitHub account
+   - Select repository: `libo/luke` (or what is your repo)
+   - Choose branch: `main`
+   - Configure build settings:
+     - **Build command**: `npm run build`
+     - **Build output directory**: `dist`
+     - **Root directory**: `/` (root)
+
+5. **Deploy to Cloudflare Pages**:
 
 ```bash
 wrangler pages deploy dist
 ```
 
 ### Automatic Git Deployment
+
+Once you've connected your GitHub repository through the Cloudflare Dashboard (step 4 above), the site will automatically deploy whenever you push to the `main` branch.
 
 The site uses a simple macro replacement system for shared `<head>` content:
 
