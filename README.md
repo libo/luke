@@ -133,7 +133,7 @@ This will:
    - Select repository: `libo/luke` (or what is your repo)
    - Choose branch: `main`
    - Configure build settings:
-     - **Build command**: `npm run build`
+     - **Build command**: `npm run build` (Cloudflare may auto-detect this from your `package.json`)
      - **Build output directory**: `dist`
      - **Root directory**: `/` (root)
 

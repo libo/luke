@@ -100,7 +100,7 @@ function copyStaticFiles() {
       item !== "build.js" &&
       item !== "shared_head.html"
     ) {
-      // Copy individual files (like favicon.ico, random-image.js, etc.) but exclude HTML files (they're processed separately), hidden files, config files, build scripts, and template files
+      // Copy individual files (like favicon.ico, random-image.js, _headers, etc.) but exclude HTML files (they're processed separately), hidden files, config files, build scripts, and template files
       fs.copyFileSync(fullPath, path.join("dist", item));
       console.log(`Copied: ${item}`);
     }
