@@ -111,10 +111,16 @@ npm install -g wrangler
 wrangler login
 ```
 
-3. **Deploy to Cloudflare Pages**:
+3. **Create Pages project** (first time only):
 
 ```bash
-wrangler pages deploy
+wrangler pages project create lukehoward-com --production-branch main
+```
+
+4. **Deploy to Cloudflare Pages**:
+
+```bash
+wrangler pages deploy dist
 ```
 
 ### Automatic Git Deployment
