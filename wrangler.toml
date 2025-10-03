@@ -1,0 +1,12 @@
+name = "lukehoward-com"
+compatibility_date = "2024-01-01"
+
+[pages]
+# Build command will run our Node.js script to process HTML files
+build.command = "node build.js"
+# Output directory - only processed files go here
+build.output = "dist"
+
+# Optional: Custom domain
+# [[pages.custom_domains]]
+# domain = "www.lukehoward.com"

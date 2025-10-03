@@ -1,0 +1,13 @@
+{
+  "name": "lukehoward-com",
+  "version": "1.0.0",
+  "description": "Luke Howard's website - static site with shared head content",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "python3 -m http.server 8000",
+    "serve": "cd dist && python3 -m http.server 8007"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
